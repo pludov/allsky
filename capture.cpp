@@ -523,16 +523,17 @@ int main(int argc, char *argv[])
         {
             quality = 95;
         }
+        compression_parameters.push_back(quality);
     }
-    else
+    else if (strcmp(ext + 1, "png") == 0 || strcmp(ext + 1, "PNG") == 0 )
     {
         compression_parameters.push_back(CV_IMWRITE_PNG_COMPRESSION);
         if (quality == 200)
         {
             quality = 3;
         }
+        compression_parameters.push_back(quality);
     }
-    compression_parameters.push_back(quality);
 
     int numDevices = ASIGetNumOfConnectedCameras();
     if (numDevices <= 0)
