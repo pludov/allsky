@@ -1,4 +1,4 @@
-platform = armv7
+platform = armv6
 
 #INCLIB = /usr/local/include
 #LDLIB = /usr/local/lib
